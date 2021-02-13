@@ -91,7 +91,7 @@ async function createToken () {
       decimals: 8,
       initialQty: 100,
       documentHash: '',
-      mintBatonVout: 2
+      mintBatonVout: 2 // 2 - flexible supply
     }
 
     // Generate the OP_RETURN entry for an SLP GENESIS transaction.
