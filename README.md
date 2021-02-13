@@ -23,8 +23,19 @@ If you want to chat with other developers interested in Bitcoin Cash, be sure
 to [join our Telegram channel](https://t.me/bch_js_toolkit).
 
 ## Installation
-Prior to running these examples, you need to setup this code repository. In the
-root directory run this commands to install the required dependencies.
+Prior to running these examples, you need to setup this code repository. 
+
+Start command line (cmd). In your home directory (e.g. C:\users\abc\) run these commands 
+
+```
+git clone https://github.com/nghiacc/bch-js-examples.git
+```
+Go to the new directory:
+```
+cd bch-js-examples
+```
+
+Run this command to install the required dependencies.
 ```
 npm install
 ```
@@ -38,7 +49,7 @@ some resources:
 - [Mastering Bitcoin Cash](https://github.com/Bitcoin-com/mastering-bitcoin-cash)
 - [bch-js and bch-api Documentation](https://fullstack.cash/documentation/)
 
-## Basic BCH Wallet Functions
+## Basic ABC Wallet Functions
 These basic examples in the `applications/wallet` directory are used to bootstrap
 a BCH wallet for use with the other examples. Recommended path:
 
@@ -46,6 +57,15 @@ a BCH wallet for use with the other examples. Recommended path:
 2. [Fund it with the testnet faucet](https://fullstack.cash/faucet/)
 3. [Check the balance](applications/wallet/check-balance/check-balance.js)
 4. [Send some BCH](applications/wallet/send-bch/send-bch.js)
+
+## SLP Wallet Functions
+These basic examples in the `applications/wallet` directory are used to bootstrap
+a ABC wallet for use with the other examples. Recommended path:
+
+1. [Create an SLP wallet](applications/slp/create-wallet/create-wallet.js)
+2. Fund it with a small amount of Bitcoin ABC token (0.0001 is sufficient
+3. [Check the balance](applications/slp/check-balances/check-balances.js)
+4. [Create token](applications/slp/create-token/create-token.js)
 
 ### A note about testnet
 Testnet isn't just a network for software developers. Many mining pools,
