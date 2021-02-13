@@ -11,16 +11,16 @@ const NETWORK = 'mainnet'
 let RECV_ADDR = ''
 
 // REST API servers.
-const BCHN_MAINNET = 'https://bchn.fullstack.cash/v4/'
-// const ABC_MAINNET = 'https://abc.fullstack.cash/v4/'
-const TESTNET3 = 'https://testnet3.fullstack.cash/v4/'
+// const BCHN_MAINNET = 'https://bchn.fullstack.cash/v4/'
+const ABC_MAINNET = 'https://abc.fullstack.cash/v4/'
+const TESTNET3 = 'https://testnet3.fullstack.cash/v4/' // BCH testnet
 
 // bch-js-examples require code from the main bch-js repo
 const BCHJS = require('@psf/bch-js')
 
 // Instantiate bch-js based on the network.
 let bchjs
-if (NETWORK === 'mainnet') bchjs = new BCHJS({ restURL: BCHN_MAINNET })
+if (NETWORK === 'mainnet') bchjs = new BCHJS({ restURL: ABC_MAINNET })
 else bchjs = new BCHJS({ restURL: TESTNET3 })
 
 // Open the wallet generated with create-wallet.

@@ -85,8 +85,8 @@ async function createToken () {
 
     // Generate SLP config object
     const configObj = {
-      name: 'SLP Test Token',
-      ticker: 'SLPTEST',
+      name: 'ABC SLP Test Token',
+      ticker: 'SLPABC',
       documentUrl: 'https://FullStack.cash',
       decimals: 8,
       initialQty: 100,
@@ -141,8 +141,8 @@ async function createToken () {
     const txidStr = await bchjs.RawTransactions.sendRawTransaction([hex])
     console.log('Check the status of your transaction on this block explorer:')
     if (NETWORK === 'testnet') {
-      console.log(`https://explorer.bitcoin.com/tbch/tx/${txidStr}`)
-    } else console.log(`https://explorer.bitcoin.com/bch/tx/${txidStr}`)
+      console.log(`https://texplorer.bitcoinabc.org/tx/${txidStr}`)
+    } else console.log(`https://explorer.bitcoinabc.org/tx/${txidStr}`)
   } catch (err) {
     console.error('Error in createToken: ', err)
   }

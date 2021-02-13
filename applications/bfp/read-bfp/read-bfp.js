@@ -10,16 +10,16 @@ const bfpHash =
   'bitcoinfile:7e68134928a116aa64f1de9695cf18156db343f745baddfdabb90b66c87436e0'
 
 // REST API servers.
-const BCHN_MAINNET = 'https://bchn.fullstack.cash/v4/'
-// const ABC_MAINNET = 'https://abc.fullstack.cash/v4/'
-const TESTNET3 = 'https://testnet3.fullstack.cash/v4/'
+// const BCHN_MAINNET = 'https://bchn.fullstack.cash/v4/'
+const ABC_MAINNET = 'https://abc.fullstack.cash/v4/'
+const TESTNET3 = 'https://testnet3.fullstack.cash/v4/' // BCH Testnet
 
 // bch-js-examples require code from the main bch-js repo
 const BCHJS = require('@psf/bch-js')
 
 // Instantiate bch-js based on the network.
 let bchjs
-if (NETWORK === 'mainnet') bchjs = new BCHJS({ restURL: BCHN_MAINNET })
+if (NETWORK === 'mainnet') bchjs = new BCHJS({ restURL: ABC_MAINNET })
 else bchjs = new BCHJS({ restURL: TESTNET3 })
 
 const Bfp = require('bitcoinfiles-node').bfp
