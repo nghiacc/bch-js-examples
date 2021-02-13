@@ -7,16 +7,16 @@
 const NETWORK = 'mainnet'
 
 // REST API servers.
-const BCHN_MAINNET = 'https://bchn.fullstack.cash/v4/'
-// const ABC_MAINNET = 'https://abc.fullstack.cash/v4/'
-const TESTNET3 = 'https://testnet3.fullstack.cash/v4/'
+// const BCHN_MAINNET = 'https://bchn.fullstack.cash/v4/'
+const ABC_MAINNET = 'https://abc.fullstack.cash/v4/'
+const TESTNET3 = 'https://testnet3.fullstack.cash/v4/' // BCH testnet
 
 // bch-js-examples require code from the main bch-js repo
 const BCHJS = require('@psf/bch-js')
 
 // Instantiate bch-js based on the network.
 let bchjs
-if (NETWORK === 'mainnet') bchjs = new BCHJS({ restURL: BCHN_MAINNET })
+if (NETWORK === 'mainnet') bchjs = new BCHJS({ restURL: ABC_MAINNET })
 else bchjs = new BCHJS({ restURL: TESTNET3 })
 
 const fs = require('fs')
@@ -45,17 +45,17 @@ async function createWallet () {
   if (NETWORK === 'mainnet') masterHDNode = bchjs.HDNode.fromSeed(rootSeed)
   else masterHDNode = bchjs.HDNode.fromSeed(rootSeed, 'testnet') // Testnet
 
-  // HDNode of BIP44 account
-  const account = bchjs.HDNode.derivePath(masterHDNode, "m/44'/245'/0'")
-  console.log('BIP44 Account: "m/44\'/245\'/0\'"')
-  outStr += 'BIP44 Account: "m/44\'/245\'/0\'"\n'
+  // HDNode of BIP44 account, 1899 for ABC SLP, 245 for BCH SLP
+  const account = bchjs.HDNode.derivePath(masterHDNode, "m/44'/1899'/0'")
+  console.log('BIP44 Account: "m/44\'/1899\'/0\'"')
+  outStr += 'BIP44 Account: "m/44\'/1899\'/0\'"\n'
 
   for (let i = 0; i < 10; i++) {
-    const childNode = masterHDNode.derivePath(`m/44'/245'/0'/0/${i}`)
+    const childNode = masterHDNode.derivePath(`m/44'/1899'/0'/0/${i}`)
     console.log(
-      `m/44'/245'/0'/0/${i}: ${bchjs.HDNode.toCashAddress(childNode)}`
+      `m/44'/1899'/0'/0/${i}: ${bchjs.HDNode.toCashAddress(childNode)}`
     )
-    outStr += `m/44'/245'/0'/0/${i}: ${bchjs.HDNode.toCashAddress(childNode)}\n`
+    outStr += `m/44'/1899'/0'/0/${i}: ${bchjs.HDNode.toCashAddress(childNode)}\n`
 
     if (i === 0) {
       outObj.cashAddress = bchjs.HDNode.toCashAddress(childNode)
