@@ -66,6 +66,19 @@ an ABC wallet for use with the other examples. Recommended path:
 2. Fund it with a small amount of Bitcoin ABC token (0.0001 is sufficient)
 3. [Check the balance](applications/slp/check-balances/check-balances.js)
 4. [Create token](applications/slp/create-token/create-token.js)
+  Change the following info in the create-token.js before running npm start:
+  ```
+      // Generate SLP config object
+    const configObj = {
+      name: 'ABC SLP Test Token',
+      ticker: 'SLPABC',
+      documentUrl: 'https://FullStack.cash',
+      decimals: 8,
+      initialQty: 100,
+      documentHash: '',
+      mintBatonVout: 2 // 2 - flexible supply
+    }
+   ```
 
 ### A note about testnet
 Testnet isn't just a network for software developers. Many mining pools,
