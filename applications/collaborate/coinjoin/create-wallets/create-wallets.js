@@ -49,10 +49,10 @@ async function createWallets () {
     const bobMasterHDNode = bchjs.HDNode.fromSeed(bobRootSeed)
     const samMasterHDNode = bchjs.HDNode.fromSeed(samRootSeed)
 
-    // Use 245 derivation path, which is the BIP44 standard for SLP tokens.
-    const aliceChildNode = aliceMasterHDNode.derivePath("m/44'/145'/0'/0/0")
-    const bobChildNode = bobMasterHDNode.derivePath("m/44'/145'/0'/0/0")
-    const samChildNode = samMasterHDNode.derivePath("m/44'/145'/0'/0/0")
+    // Replace with 1899 derivation path for SLP, which is the BIP44 standard for SLP tokens.
+    const aliceChildNode = aliceMasterHDNode.derivePath("m/44'/899'/0'/0/0")
+    const bobChildNode = bobMasterHDNode.derivePath("m/44'/899'/0'/0/0")
+    const samChildNode = samMasterHDNode.derivePath("m/44'/899'/0'/0/0")
 
     const aliceObj = {}
     aliceObj.mnemonic = aliceMnemonic

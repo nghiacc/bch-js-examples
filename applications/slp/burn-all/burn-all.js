@@ -139,7 +139,7 @@ async function changeAddrFromMnemonic (mnemonic) {
     else masterHDNode = bchjs.HDNode.fromSeed(rootSeed, 'testnet')
 
     // HDNode of BIP44 account
-    const account = bchjs.HDNode.derivePath(masterHDNode, "m/44'/245'/0'")
+    const account = bchjs.HDNode.derivePath(masterHDNode, "m/44'/1899'/0'")
 
     // derive the first external change address HDNode which is going to spend utxo
     const change = bchjs.HDNode.derivePath(account, '0/0')

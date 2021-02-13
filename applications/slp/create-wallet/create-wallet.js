@@ -31,8 +31,8 @@ async function createWallet () {
     128,
     bchjs.Mnemonic.wordLists()[lang]
   )
-  console.log('BIP44 $BCH Wallet')
-  outStr += 'BIP44 $BCH Wallet\n'
+  console.log('BIP44 $ABC Wallet')
+  outStr += 'BIP44 $ABC Wallet\n'
   console.log(`128 bit ${lang} BIP39 Mnemonic: `, mnemonic)
   outStr += `\n128 bit ${lang} BIP32 Mnemonic:\n${mnemonic}\n\n`
   outObj.mnemonic = mnemonic

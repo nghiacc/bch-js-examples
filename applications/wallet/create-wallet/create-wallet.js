@@ -34,8 +34,8 @@ async function createWallet () {
       128,
       bchjs.Mnemonic.wordLists()[lang]
     )
-    console.log('BIP44 $BCH Wallet')
-    outStr += 'BIP44 $BCH Wallet\n'
+    console.log('BIP44 $ABC Wallet')
+    outStr += 'BIP44 $ABC Wallet\n'
     console.log(`128 bit ${lang} BIP39 Mnemonic: `, mnemonic)
     outStr += `\n128 bit ${lang} BIP32 Mnemonic:\n${mnemonic}\n\n`
     outObj.mnemonic = mnemonic
@@ -49,16 +49,16 @@ async function createWallet () {
     else masterHDNode = bchjs.HDNode.fromSeed(rootSeed, 'testnet') // Testnet
 
     // HDNode of BIP44 account
-    console.log('BIP44 Account: "m/44\'/145\'/0\'"')
-    outStr += 'BIP44 Account: "m/44\'/145\'/0\'"\n'
+    console.log('BIP44 Account: "m/44\'/899\'/0\'"')
+    outStr += 'BIP44 Account: "m/44\'/899\'/0\'"\n'
 
     // Generate the first 10 seed addresses.
     for (let i = 0; i < 10; i++) {
-      const childNode = masterHDNode.derivePath(`m/44'/145'/0'/0/${i}`)
+      const childNode = masterHDNode.derivePath(`m/44'/899'/0'/0/${i}`)
       console.log(
-        `m/44'/145'/0'/0/${i}: ${bchjs.HDNode.toCashAddress(childNode)}`
+        `m/44'/899'/0'/0/${i}: ${bchjs.HDNode.toCashAddress(childNode)}`
       )
-      outStr += `m/44'/145'/0'/0/${i}: ${bchjs.HDNode.toCashAddress(
+      outStr += `m/44'/899'/0'/0/${i}: ${bchjs.HDNode.toCashAddress(
         childNode
       )}\n`
 

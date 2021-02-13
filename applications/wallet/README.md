@@ -43,7 +43,7 @@ Running `npm start` in this directory will overwrite any previous
 `wallet-info.txt` and `wallet.json` files. **BE CAREFUL TO BACKUP THESE FILES.**
 
 The `wallet.json` file will contain your 12-word mnemonic seed phrase for that wallet.
-The `wallet.json` file will also contain your primary BCH wallet address.
+The `wallet.json` file will also contain your primary ABC wallet address.
 The `wallet-info.txt` file goes a step further: while containing your mnemonic
 seed phrase, it also contains 10 different BCH addresses you can use with your
 single mnemonic. This demonstrates on how to generate multiple public/private key

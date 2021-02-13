@@ -46,7 +46,7 @@ async function getBalance () {
     else masterHDNode = bchjs.HDNode.fromSeed(rootSeed, 'testnet') // Testnet
 
     // HDNode of BIP44 account
-    const account = bchjs.HDNode.derivePath(masterHDNode, "m/44'/245'/0'")
+    const account = bchjs.HDNode.derivePath(masterHDNode, "m/44'/1899'/0'")
 
     const change = bchjs.HDNode.derivePath(account, '0/0')
 
