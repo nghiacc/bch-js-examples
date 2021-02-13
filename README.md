@@ -51,16 +51,16 @@ some resources:
 
 ## Basic ABC Wallet Functions
 These basic examples in the `applications/wallet` directory are used to bootstrap
-a BCH wallet for use with the other examples. Recommended path:
+an ABC wallet for use with the other examples. Recommended path:
 
 1. [Create a testnet wallet](applications/wallet/create-wallet/create-wallet.js)
 2. [Fund it with the testnet faucet](https://fullstack.cash/faucet/)
 3. [Check the balance](applications/wallet/check-balance/check-balance.js)
-4. [Send some BCH](applications/wallet/send-bch/send-bch.js)
+4. [Send some ABC tokens](applications/wallet/send-bch/send-bch.js)
 
 ## SLP Wallet Functions
 These basic examples in the `applications/wallet` directory are used to bootstrap
-a ABC wallet for use with the other examples. Recommended path:
+an ABC wallet for use with the other examples. Recommended path:
 
 1. [Create an SLP wallet](applications/slp/create-wallet/create-wallet.js)
 2. Fund it with a small amount of Bitcoin ABC token (0.0001 is sufficient)
