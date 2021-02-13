@@ -63,7 +63,7 @@ These basic examples in the `applications/wallet` directory are used to bootstra
 a ABC wallet for use with the other examples. Recommended path:
 
 1. [Create an SLP wallet](applications/slp/create-wallet/create-wallet.js)
-2. Fund it with a small amount of Bitcoin ABC token (0.0001 is sufficient
+2. Fund it with a small amount of Bitcoin ABC token (0.0001 is sufficient)
 3. [Check the balance](applications/slp/check-balances/check-balances.js)
 4. [Create token](applications/slp/create-token/create-token.js)
 
