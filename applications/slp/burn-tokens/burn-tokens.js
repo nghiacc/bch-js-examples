@@ -5,7 +5,7 @@
 // CUSTOMIZE THESE VALUES FOR YOUR USE
 const TOKENQTY = 2500000
 const TOKENID =
-  //'8de4984472af772f144a74de473d6c21505a6d89686b57445c3e4fc7db3773b6'
+  // '8de4984472af772f144a74de473d6c21505a6d89686b57445c3e4fc7db3773b6'
   'c96230c6eec94729ab3bc4573bc45b345ad095c0c2094bb91bdc9a06bfa8283b'
 
 // Set NETWORK to either testnet or mainnet
@@ -96,7 +96,7 @@ async function burnTokens () {
 
     // Choose a UTXO to pay for the transaction.
     const bchUtxo = findBiggestUtxo(bchUtxos)
-    console.log(`bchUtxo: ${JSON.stringify(bchUtxo, null, 2)}`);
+    console.log(`bchUtxo: ${JSON.stringify(bchUtxo, null, 2)}`)
 
     // Generate the SLP OP_RETURN.
     const slpData = bchjs.SLP.TokenType1.generateBurnOpReturn(
