@@ -85,11 +85,11 @@ async function createToken () {
 
     // Generate SLP config object
     const configObj = {
-      name: 'ABC SLP Test Token',
-      ticker: 'SLPABC',
-      documentUrl: 'https://FullStack.cash',
-      decimals: 8,
-      initialQty: 100,
+      name: 'EAT Token',
+      ticker: 'EAT',
+      documentUrl: 'https://bcPro.foundation',
+      decimals: 4,
+      initialQty: 100000,
       documentHash: '',
       mintBatonVout: 2
     }
